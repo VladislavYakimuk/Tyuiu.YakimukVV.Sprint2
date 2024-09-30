@@ -8,12 +8,12 @@ namespace Tyuiu.YakimukVV.Sprint2.Task0.V12.Lib
         {
             return new bool[]
             {
-                x == y,     
-                x != y,     
-                x < y,      
+                x != y,   
+                x == y,   
                 x > y,      
-                x <= y,     
-                x >= y      
+                x < y,      
+                x >= y,     
+                x <= y       
             };
         }
     }
