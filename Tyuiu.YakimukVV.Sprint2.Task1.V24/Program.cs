@@ -32,7 +32,7 @@ namespace Tyuiu.YakimukVV.Sprint2.Task1.V24
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            foreach (var result in results)
+            foreach (bool result in results)
             {
                 Console.WriteLine(result);
             }
