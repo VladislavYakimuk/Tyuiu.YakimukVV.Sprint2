@@ -1,27 +1,28 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint2;
+﻿using System;
+using tyuiu.cources.programming.interfaces.Sprint2;
 
 namespace Tyuiu.YakimukVV.Sprint2.Task5.V9.Lib
 {
     public class DataService : ISprint2Task5V9
     {
-        public string FindDateOfNextDay(int m, int n)
+        public string FindDateOfNextDay(int n, int m)
         {
             int nextDay = n;
             int nextMonth = m;
 
             switch (m)
             {
-                case 1: 
-                case 3: 
-                case 5: 
-                case 7: 
-                case 8: 
-                case 10: 
-                case 12: 
+                case 1: // Январь
+                case 3: // Март
+                case 5: // Май
+                case 7: // Июль
+                case 8: // Август
+                case 10: // Октябрь
+                case 12: // Декабрь
                     if (n == 31)
                     {
                         nextDay = 1;
-                        nextMonth = (m == 12) ? 1 : m + 1; 
+                        nextMonth = (m == 12) ? 1 : m + 1;
                     }
                     else
                     {
@@ -29,10 +30,10 @@ namespace Tyuiu.YakimukVV.Sprint2.Task5.V9.Lib
                     }
                     break;
 
-                case 4: 
-                case 6: 
-                case 9:
-                case 11: 
+                case 4: // Апрель
+                case 6: // Июнь
+                case 9: // Сентябрь
+                case 11: // Ноябрь
                     if (n == 30)
                     {
                         nextDay = 1;
@@ -44,11 +45,11 @@ namespace Tyuiu.YakimukVV.Sprint2.Task5.V9.Lib
                     }
                     break;
 
-                case 2: 
+                case 2: // Февраль
                     if (n == 28)
                     {
                         nextDay = 1;
-                        nextMonth = 3; 
+                        nextMonth = 3; // Март
                     }
                     else
                     {
@@ -60,6 +61,7 @@ namespace Tyuiu.YakimukVV.Sprint2.Task5.V9.Lib
                     throw new ArgumentException("Некорректный номер месяца.");
             }
 
+            
             return $"{nextDay:D2}.{nextMonth:D2}";
         }
     }
